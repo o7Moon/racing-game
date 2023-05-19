@@ -2,6 +2,11 @@
   <img src="https://github.com/o7Moon/racing-game/blob/main/Assets/Materials/pdr_logo_transparent.png?raw=true" />
 </p>
 
+# Installation
+- grab the zip file for your OS from <a href = "https://github.com/o7Moon/racing-game/releases/tag/1.0">releases</a>
+- unzip it somewhere
+- run the executable (exe for windows, x86_64 for linux)
+
 # How To Play
 ## Movement
 - air movement is quake-based, with a dynamic "max speed" that updates when you're on the ground.
