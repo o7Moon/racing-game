@@ -19,13 +19,13 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && RunManager.Instance.state == RunManager.RunState.Exploring)
+        if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)) && RunManager.Instance.state == RunManager.RunState.Exploring && !pauseMenu.activeSelf)
         {
             Cursor.lockState = CursorLockMode.None;
             pauseMenu.SetActive(true);
         }
 
-        if (Input.GetMouseButtonDown(0))
+        else if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)) && RunManager.Instance.state == RunManager.RunState.Exploring && pauseMenu.activeSelf)
         {
             Cursor.lockState = CursorLockMode.Locked;
             pauseMenu.SetActive(false);
@@ -45,5 +45,9 @@ public class UIManager : MonoBehaviour
     public void setTime(float seconds) {
         TimeSpan time = TimeSpan.FromSeconds(seconds);
         timer.text = string.Format("{0:D}:{1:D2}.{2:D2}",(int)time.TotalMinutes, (int)time.Seconds, (int)time.Milliseconds);
+    }
+
+    public void quitGame(){
+        Application.Quit();
     }
 }

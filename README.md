@@ -23,6 +23,3 @@
 - do a slide, then a jump, then <a href="https://youtu.be/rTsXO6Zicls">air strafe</a>, and repeat when you land. This is a very good way to build momentum but you'll want to stay away from uphills as they'll slow you down.
 - you can change the mouse sensitivity with the slider in the bottom of the pause menu.
 - the force from sliding is parallel to the ground you stand on. This means that sliding on a slope and then jumping results in a large amount of vertical veloicity.
-
-### this branch is kept as an archive
-if you want to modify the game, please create a fork.

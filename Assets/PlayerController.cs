@@ -81,19 +81,12 @@ public class PlayerController : MonoBehaviour
     {
         if (!canMove)
         {
-            rb.isKinematic = true;
             rb.velocity = Vector3.zero;
             return;
         }
-        else rb.isKinematic = false;
         slide_buffer = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.C);
-
-        //Debug.Log("Can Stop Sliding: " + CanStopSliding());
-
-        //Debug.Log("Speed: " + rb.velocity.magnitude + " u/s");
         
         bool grounded = OnGround();
-        //Debug.Log("Grounded: " + grounded + " Pos: "+rb.position.y);
 
         if (sliding) ApplyFriction(friction * 0.25f);
         else if (grounded) ApplyFriction(friction);

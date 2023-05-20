@@ -106,7 +106,8 @@ public class RunManager : MonoBehaviour
 
     IEnumerator hideTimerAfterEndRun(){
         yield return new WaitForSecondsRealtime(3);
-        UIManager.Instance.HideTimer();
+        if (state == RunState.Exploring)
+            UIManager.Instance.HideTimer();
     }
 
     IEnumerator cancelSelecting() {
